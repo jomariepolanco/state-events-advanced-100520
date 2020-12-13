@@ -11,7 +11,6 @@ class App extends React.Component {
   }
 
   addFavorites = (id) => {
-    // console.log(beyObj)
     let newArr = [...this.state.api]
     let favObj = newArr.find(bey => bey.id === id)
     favObj.favorite = true 
@@ -31,7 +30,6 @@ class App extends React.Component {
 
 
   render() {
-    // console.log(this.notFavorites())
     return (
       <div className="container" >
         <BeyContainer cards={this.state.api} toggleCardFavorites={this.addFavorites} />
